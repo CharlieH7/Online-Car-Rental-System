@@ -1,0 +1,124 @@
+{
+	"cars": [
+        {
+            "category": "Wagon",
+            "availability": false,
+            "brand": "Toyota",
+            "model": "Auris",
+            "model_year": 2018,
+            "mileage": 15000,
+            "fuel_type": "Diesel",
+            "seats": 5,
+            "price_per_day": 150,
+            "description": "An Auris Car"
+        },
+		{
+            "category": "SUV",
+            "availability": true,
+            "brand": "Toyota",
+            "model": "Tucson",
+            "model_year": 2020,
+            "mileage": 5000,
+            "fuel_type": "Petrol",
+            "seats": 4,
+            "price_per_day": 180,
+            "description": "A Tucson Car"
+		},
+		{
+            "category": "SUV",
+            "availability": true,
+            "brand": "Toyota",
+            "model": "RAV4",
+            "model_year": 2017,
+            "mileage": 13000,
+            "fuel_type": "Diesel",
+            "seats": 4,
+            "price_per_day": 160,
+            "description": "A RAV4 Car"
+		},
+		{
+            "category": "Wagon",
+            "availability": true,
+            "brand": "Toyota",
+            "model": "Outback",
+            "model_year": 2019,
+            "mileage": 8000,
+            "fuel_type": "Diesel",
+            "seats": 5,
+            "price_per_day": 200,
+            "description": "An Outback Car"
+		},
+		{
+            "category": "SUV",
+            "availability": false,
+            "brand": "Ford",
+            "model": "Explorer",
+            "model_year": 2017,
+            "mileage": 22000,
+            "fuel_type": "Gasoline",
+            "seats": 7,
+            "price_per_day": 150,
+            "description": "A Ford Explorer"
+		},
+		{
+            "category": "Sedan",
+            "availability": true,
+            "brand": "Audi",
+            "model": "A6",
+            "model_year": 2019,
+            "mileage": 13000,
+            "fuel_type": "Gasoline",
+            "seats": 5,
+            "price_per_day": 200,
+            "description": "An Audi A6"
+		},
+		{
+            "category": "Sedan",
+            "availability": true,
+            "brand": "BMW",
+            "model": "740i",
+            "model_year": 2016,
+            "mileage": 18000,
+            "fuel_type": "Gasoline",
+            "seats": 5,
+            "price_per_day": 300,
+            "description": "A BMW 740i"
+		},
+		{
+            "category": "Hatchback",
+            "availability": false,
+            "brand": "Volkswagen",
+            "model": "Golf GTI",
+            "model_year": 2020,
+            "mileage": 8000,
+            "fuel_type": "Gasoline",
+            "seats": 5,
+            "price_per_day": 120,
+            "description": "A Volkswagen Golf GTI"
+		},
+		{
+            "category": "SUV",
+            "availability": true,
+            "brand": "Mercedes-Benz",
+            "model": "GLE",
+            "model_year": 2017,
+            "mileage": 25000,
+            "fuel_type": "Diesel",
+            "seats": 7,
+            "price_per_day": 250,
+            "description": "A Mercedes-Benz GLE"
+		},
+		{
+            "category": "SUV",
+            "availability": false,
+            "brand": "Jeep",
+            "model": "Grand Cherokee",
+            "model_year": 2018,
+            "mileage": 12000,
+            "fuel_type": "Gasoline",
+            "seats": 5,
+            "price_per_day": 200,
+            "description": "A Jeep Grand Cherokee"
+		}
+	]
+}
