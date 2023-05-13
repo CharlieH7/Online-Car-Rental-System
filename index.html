@@ -4,7 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
     <title>Hertz-UTS Online Car Rental System</title>
   </head>
-  <body></body>
+  <body>
+    <script type="text/javascript">
+    $.ajax({
+      url: 'cars.json',
+      dataType: 'json',
+      success: function(data) {
+        var carTable = $('#carTable tbody');
+        $.each(data.cars, function(index, car) {
+          var row = $('<tr>');
+          row.append($('<td>').html('<img src="./assets/' + car.model + '.jpg" class="car-img">'));
+          row.append($('<td>').text(car.brand));
+          row.append($('<td>').text(car.model));
+          row.append($('<td>').text(car.model_year));
+          row.append($('<td>').text(car.mileage));
+          row.append($('<td>').text(car.fuel_type));
+          row.append($('<td>').text(car.seats));
+          row.append($('<td>').text(car.price_per_day));
+          row.append($('<td>').text(car.availability ? 'Available' : 'Not Available'));
+          row.append($('<td>').text(car.description));
+          row.append($('<td>').html('<button>Add to Cart</button>'));
+          carTable.append(row);
+        });
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.log('Error loading data: ' + textStatus);
+      }
+    });
+
+
+  </script>
+  <section id="nav">
+    <nav>
+      <div class="nav__container">
+        <figure>
+          <img class="logo" src="./assets/logo.png" alt="Website Logo">
+        </figure>
+        <h1>Car Rental Center</h1>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><form action='viewCart.php' method='post'>
+            <a class="nav__link" class="nav__link--primary">Car Reservation</a>
+          </form></li>
+        </ul>
+      </div>
+
+
+
+
+    </nav>
+  </section>
+  
+  <table id="carTable">
+    <thead>
+      <tr>
+        <th class="img">Image</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Model Year</th>
+        <th>Mileage</th>
+        <th>Fuel Type</th>
+        <th>Seats</th>
+        <th>Price per Day</th>
+        <th>Availability</th>
+        <th>Description</th>
+        <th>Add to Cart</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  
+  </body>
 </html>

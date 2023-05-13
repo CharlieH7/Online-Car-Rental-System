@@ -15,7 +15,7 @@
 		{
             "category": "SUV",
             "availability": true,
-            "brand": "Toyota",
+            "brand": "Hyundai",
             "model": "Tucson",
             "model_year": 2020,
             "mileage": 5000,
@@ -39,7 +39,7 @@
 		{
             "category": "Wagon",
             "availability": true,
-            "brand": "Toyota",
+            "brand": "Subaru",
             "model": "Outback",
             "model_year": 2019,
             "mileage": 8000,
