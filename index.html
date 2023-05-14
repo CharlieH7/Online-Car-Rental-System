@@ -6,52 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Hertz-UTS Online Car Rental System</title>
   </head>
   <body>
-    <script type="text/javascript">
-    $.ajax({
-      url: 'cars.json',
-      dataType: 'json',
-      success: function(data) {
-        var carTable = $('#carTable tbody');
-        $.each(data.cars, function(index, car) {
-          var row = $('<tr>');
-          row.append($('<td>').html('<img src="./assets/' + car.model + '.jpg" class="car-img">'));
-          row.append($('<td>').text(car.brand));
-          row.append($('<td>').text(car.model));
-          row.append($('<td>').text(car.model_year));
-          row.append($('<td>').text(car.mileage));
-          row.append($('<td>').text(car.fuel_type));
-          row.append($('<td>').text(car.seats));
-          row.append($('<td>').text(car.price_per_day));
-          row.append($('<td>').text(car.availability ? 'Available' : 'Not Available'));
-          row.append($('<td>').text(car.description));
-          row.append($('<td>').html('<button>Add to Cart</button>'));
-          carTable.append(row);
-        });
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        console.log('Error loading data: ' + textStatus);
-      }
-    });
-
-
-  </script>
-  <section id="nav">
+    <section id="nav">
     <nav>
       <div class="nav__container">
         <figure>
           <img class="logo" src="./assets/logo.png" alt="Website Logo">
         </figure>
         <h1>Car Rental Center</h1>
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search">
         <ul class="nav__links">
           <li><a href="index.html" class="nav__link">Home</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
-          <li><form action='viewCart.php' method='post'>
-            <a class="nav__link">Car Reservation</a>
-          </form></li>
+          <li>
+            <a id="reserveButton" class="blue nav__link">Car Reservation</a>
+          </li>
         </ul>
+        <div class="cart-icon">
+          <a href="viewCart.html" id="reserveButton"><i class="fas fa-shopping-cart"></i></a>
+        </div>
       </div>
     </nav>
   </section>
@@ -75,6 +53,17 @@
     <tbody>
     </tbody>
   </table>
-  
+  <!-- Footer Section Starts -->
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>
+              Created by Charlie Huang (14247845) | UTS 31748 Programming on the
+              Internet | All Right Reserved
+            </h3>
+          </div>
+        </div>
+      </section>
+    <!-- Footer Section Ends -->
   </body>
 </html>

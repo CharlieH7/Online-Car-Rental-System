@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+:root {
+  --orange: #ff7800;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +17,24 @@
   font-family: "Roboto", sans-serif;
 }
 
+#search {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  margin: -20px;
+  width: 200px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+nav label {
+  color: white;
+  font-size: 18px;
+}
 /* Set global font */
 /* Global Styles */
 body {
@@ -30,8 +58,41 @@ body {
   padding: 0 20px;
 }
 
+.blue {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #418ee7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cart-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 4rem;
+}
+
+.cart-icon a {
+  color: black;
+  text-decoration: none;
+}
+
+.cart-icon a:hover {
+  color: red;
+}
+
 .logo {
   height: 60px;
+}
+
+.nav__search input[type="text"] {
+  border: none;
+  outline: none;
+  width: 70%;
+  padding: 10px;
+  font-size: 14px;
 }
 
 h1 {
@@ -108,6 +169,16 @@ button:hover {
   background-color: #e68a00;
 }
 
+.footer {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange);
+}
+
 /* styles for screens smaller than 768px wide */
 @media screen and (max-width: 767px) {
   /* adjust table font size and cell padding */
@@ -181,76 +252,75 @@ button:hover {
 
 /* Style for the contact form */
 #contact {
-    background-color: #f2f2f2;
-    padding: 50px 0;
-  }
-  
-  .contact__container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+  background-color: #f2f2f2;
+  padding: 50px 0;
+}
+
+.contact__container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__container h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__group label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form__group input,
+.form__group textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form__group button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form__group button:hover {
+  background-color: #3e8e41;
+}
+
+@media screen and (max-width: 768px) {
   .contact__container h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 28px;
   }
-  
-  .form__group {
-    margin-bottom: 20px;
-  }
-  
+
   .form__group label {
-    display: block;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
-  
+
   .form__group input,
   .form__group textarea {
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
+    padding: 8px;
   }
-  
-  .form__group input:focus,
-  .form__group textarea:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
-  
+
   .form__group button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 16px;
   }
-  
-  .form__group button:hover {
-    background-color: #3e8e41;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .contact__container h2 {
-      font-size: 28px;
-    }
-    
-    .form__group label {
-      font-size: 20px;
-    }
-    
-    .form__group input,
-    .form__group textarea {
-      padding: 8px;
-    }
-    
-    .form__group button {
-      font-size: 20px;
-      padding: 8px 16px;
-    }
-  }
-  
+}

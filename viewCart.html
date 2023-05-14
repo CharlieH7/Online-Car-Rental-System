@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- viewcart.html -->
+<!-- HTML code for the cart table -->
+<table>
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="cartTableBody">
+    </tbody>
+  </table>
+  
+  <!-- HTML element for displaying the total cart price -->
+  <p>Total Price: <span id="totalPrice"></span></p>
+  
+  <script>
+  $(document).ready(function () {
+    // Get the cart data from the localStorage
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Loop through the cart items and add them to the HTML table
+    var cartTableBody = $('#cartTableBody');
+    var totalPrice = 0;
+    $.each(cart, function (index, item) {
+      var row = $('<tr>');
+      row.append($('<td>').text(item.brand));
+      row.append($('<td>').text(item.model));
+      row.append($('<td>').text(item.year));
+      row.append($('<td>').text(item.price));
+      cartTableBody.append(row);
+      
+      totalPrice += parseFloat(item.price);
+    });
+    
+    // Display the total cart price
+    $('#totalPrice').text(totalPrice.toFixed(2));
+  });
+  </script>
+  
+</body>
+</html>
