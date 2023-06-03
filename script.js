@@ -22,7 +22,7 @@ $.ajax({
           $("<td>").text(car.availability ? "Available" : "Not Available")
         );
         row.append($("<td>").text(car.description));
-        row.append($("<td>").html("<button class='addToCart'>Add to Cart</button>"));
+        row.append($("<td>").html("<button class='addToCartButton'>Add to Cart</button>"));
         carTable.append(row);
       });
     }
@@ -36,3 +36,4 @@ $.ajax({
       });
     });
   });
+

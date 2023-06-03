@@ -324,3 +324,8 @@ button:hover {
     padding: 8px 16px;
   }
 }
+
+.car-thumbnail {
+  width: 200px;
+  height: auto;
+}
