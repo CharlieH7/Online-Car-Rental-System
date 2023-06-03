@@ -12,9 +12,32 @@
 </head>
 <body>
 <!-- viewcart.html -->
+<section id="nav">
+  <nav>
+    <div class="nav__container">
+      <figure>
+        <img class="logo" src="./assets/logo.png" alt="Website Logo">
+      </figure>
+      <h1>Car Rental Center</h1>
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search">
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+        <li> 
+          <a id="reserveButton" class="blue nav__link" href="viewCart.html">Car Reservation</a>
+        </li>
+      </ul>
+      <div class="cart-icon">
+        <a href="viewCart.html" id="reserveButton"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </nav>
+</section>
 <!-- HTML code for the cart table -->
 <table>
     <thead>
+      <h1 class="title">Car Reservation</h1>
       <tr>
         <th>Thumbnail</th>
         <th>Brand</th>
@@ -30,6 +53,9 @@
   </table>
   
   <!-- HTML element for displaying the total cart price -->
-  <p>Total Price: <span id="totalPrice"></span></p>
+  <div class="actions">
+    <p>Total Price: <span id="totalPrice"></span></p>
+  </div>
+  
 </body>
 </html>

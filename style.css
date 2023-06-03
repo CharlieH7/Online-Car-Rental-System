@@ -329,3 +329,23 @@ button:hover {
   width: 200px;
   height: auto;
 }
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Center the table */
+table {
+  margin: 0 auto;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 100px;
+  align-items: center;
+  margin-top: 10px;
+}
