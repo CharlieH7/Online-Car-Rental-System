@@ -21,8 +21,16 @@ $(document).ready(function() {
     cart.push(car);
     // Update the cart data in localStorage
     updateCart();
-    // Display a success message
-    alert('Car added to cart successfully.');
+    // Display the animation
+    var animation = $('<div>')
+      .addClass('cart-animation')
+      .text('Car added to cart successfully.');
+    $('#cartAnimation').append(animation);
+    
+    // Remove the animation after a certain duration
+    setTimeout(function() {
+      animation.remove();
+    }, 1500);
   });
 
   // Remove from Cart button click event handler
@@ -79,5 +87,14 @@ $(document).ready(function() {
 
     // Display the total cart price
     $('#totalPrice').text("$" + totalPrice.toFixed(2));
+  // Check if the cart is empty
+  if (cart.length === 0) {
+    // If the cart is empty, disable the checkout button
+    $("#checkoutButton").addClass("disabled");
+    // Disable the checkout button
+    $("#checkoutButton").prop("disabled", true);
+    $("#checkoutButton").css("background-color", "#ccc");
+    $("#checkoutButton").css("cursor", "not-allowed");
   }
+}
 });

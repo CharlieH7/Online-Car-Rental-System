@@ -335,7 +335,24 @@ button:hover {
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+h2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 270px;
+}
+
+.details {
+  display: block;
+  margin: 20px auto;
+  max-width: 600px; /* optional, adjust to your preference */
+}
+
 
 /* Center the table */
 table {
@@ -411,3 +428,63 @@ table {
     padding: 8px 16px;
   }
 }
+
+.payment {
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.checkout-buttons button {
+  background-color: #418ee7;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkout-buttons button:hover {
+  background-color: #1ca4d6;
+}
+
+.checkout-buttons input[type="submit"] {
+  background-color: #418ee7;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.checkout-buttons input[type="submit"]:hover {
+  background-color: #e68a00;
+}
+
+.success-message {
+  display: none;
+  background-color: #e6f7ed;
+  border: 1px solid #9ae6b4;
+  color: #1b5e20;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 300px;
+}
+
+.action p {
+  margin-right: 10px;
+}
+
