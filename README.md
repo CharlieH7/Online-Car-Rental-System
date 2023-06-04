@@ -1,3 +1,3 @@
-# Online-Car-Rental-System
-View my website here
-https://charlieh7.github.io/Online-Car-Rental-System/
+<h1>31748 Programming on the Internet - Autumn 2023 Assignment 2</h1>
+
+<img src="assets/logo.png?raw=true" width="200px">
