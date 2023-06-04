@@ -1,6 +1,30 @@
 {
       "cars": [
             {
+                  "category": "SUV",
+                  "availability": true,
+                  "brand": "Toyota",
+                  "model": "Yaris-Cross",
+                  "model_year": 2022,
+                  "mileage": 15000,
+                  "fuel_type": "Hybrid",
+                  "seats": 5,
+                  "price_per_day": 100,
+                  "description": "The Toyota Yaris Cross is a compact SUV (Sport Utility Vehicle) manufactured by Toyota, a renowned Japanese automaker. It is based on the popular Toyota Yaris hatchback but designed with SUV characteristics to offer a more rugged and versatile driving experience."
+            },
+            {
+                  "category": "Minivan",
+                  "availability": true,
+                  "brand": "Kia",
+                  "model": "Carnival",
+                  "model_year": 2023,
+                  "mileage": 5000,
+                  "fuel_type": "Petrol",
+                  "seats": 8,
+                  "price_per_day": 180,
+                  "description": "The Kia Carnival is a spacious and versatile minivan that offers comfortable seating for up to 8 passengers. It is designed to provide a smooth and enjoyable driving experience for both the driver and the passengers. The Carnival comes with a host of advanced features and modern technologies, making it an excellent choice for family trips and group outings."
+            },
+            {
                   "category": "Wagon",
                   "availability": false,
                   "brand": "Toyota",
