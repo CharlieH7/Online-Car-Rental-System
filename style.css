@@ -349,3 +349,65 @@ table {
   align-items: center;
   margin-top: 10px;
 }
+
+#checkoutForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
+#checkoutForm label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#checkoutForm input[type="text"],
+#checkoutForm input[type="email"],
+#checkoutForm select {
+  width: 100%;
+  padding: 10px;
+  border: var(--border);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#checkoutForm input[type="submit"] {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#checkoutForm input[type="submit"]:hover {
+  background-color: #e68a00;
+}
+
+#checkoutForm span#totalPrice {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  #checkoutForm {
+    padding: 10px;
+  }
+
+  #checkoutForm input[type="text"],
+  #checkoutForm input[type="email"],
+  #checkoutForm select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #checkoutForm input[type="submit"] {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
